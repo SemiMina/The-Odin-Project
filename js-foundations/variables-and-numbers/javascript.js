@@ -133,6 +133,7 @@ console.log(typeof x); // numbers
 x = 1.567;
 
 console.log(x.toFixed(2)); // 1.57
+console.log(typeof x.toFixed(2)); // string
 
 // increment and decrement
 x = 1;
@@ -158,11 +159,18 @@ console.log(x === 4);  //true
 
 console.log(x !== 4);  // false
 
+console.log(1 == "1"); // true
+
+console.log(1 === "1"); // false
+
+console.log(true === 1); // false
+
 // Infinity
 x /= 0;
 
 console.log(x); // Infinity
 
 console.log(typeof Infinity); // number
+
 
 
