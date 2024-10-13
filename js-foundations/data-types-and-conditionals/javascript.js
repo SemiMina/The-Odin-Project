@@ -186,3 +186,74 @@ if (Math.random() < 0.5) {
 }
 
 console.log(text);
+
+// Logical operators
+// convert to a boolean
+// || OR
+console.log(1 || 0); // 1
+
+// test if any of the given conditions is true
+if (0 || false || 1) {
+    console.log('it is true');
+  }
+
+// find the first truthy value 
+// or the last one if no truthy value is found
+console.log(1 || 0); // 1
+console.log(0 || 1); // 1
+console.log(0 || true || 1); // true
+console.log(null || 0); // 0
+console.log(null || 0 || 1 || true); // 1
+console.log(null || 0 || '' || 'string' || 0); // 'string'
+console.log(null || undefined || false); // false, do not convert
+
+// && AND
+// test if all of the given conditions is true
+if (1 && true && 'string') {
+  console.log('it is true');
+}
+
+// find the first falsy value 
+// or the last one if no falsy value is found
+console.log(1 && 0); // 0
+console.log(0 && 1); // 0
+console.log(1 && 2 && 3); // 3
+console.log(1 && 2 && 0 && 3); // 0
+
+// ! NOT
+// converts to boolean type and returns the inverse value
+console.log( !1 ); // false
+console.log( !null ); // true
+console.log( !undefined ); // true
+
+// !! = Boolean()
+console.log( !!1 ); // true
+console.log( Boolean(1) ); // true
+
+// ?? Nullish coalescing
+// returns the first defined value
+let userName;
+console.log( userName ?? "Anonymous"); // Anonymous
+
+userName = "Mary";
+console.log( userName ?? "Anonymous"); // Mary
+
+// ?
+// to assign a variable in condition
+age = 19;
+let accessAllowed = age > 18 ? true : false;
+
+console.log(accessAllowed); // true
+
+// switch statement
+//  to replace multiple if checks
+switch (age) {
+  case 18:
+    console.log( 'Too small' );
+    break;
+  case 19:
+    console.log( 'Exactly!' );
+    break;
+  default:
+    console.log( "I don't know such values" );
+}
