@@ -35,3 +35,16 @@ div.appendChild(h1_in_div);
 div.appendChild(p_in_div);
 
 container.appendChild(div);
+
+// Events
+const btn = document.querySelector("#btn");
+
+btn.onclick = () => alert("Hello!");
+
+btn.addEventListener("mouseenter", () => {
+    alert("Press me!");
+});
+
+btn.addEventListener("mouseleave", () => {
+    alert("Do you press me?");
+});
